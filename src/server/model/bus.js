@@ -13,12 +13,4 @@ const schema = new Schema({
   }
 })
 
-// schema.methods = {
-
-//   find: function (id) {
-//     console.log("model ", id);
-//     return this.findOne({busId:id}).exec()
-//   }
-
-// }
 module.exports = mongoose.model('Bus', schema)
