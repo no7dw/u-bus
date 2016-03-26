@@ -1,9 +1,14 @@
 'use strict'
 
 const user = require('./controller/user')
+const bus = require('./controller/bus')
 const sign = require('./controller/sign')
+const index = require('./controller/index')
 const auth = require('./middleware/authenticator')
 const router = require('koa-router')()
+
+router.get('/', index.index)
+router.get('/bus/:id', bus.getInfoById)
 
 // sign
 router.get('/login', sign.showLogin)
