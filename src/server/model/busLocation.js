@@ -5,8 +5,8 @@ const Schema = mongoose.Schema
 
 const schema = new Schema({
   busId:String,
-  location: String,
-  time: Date
+  location: Object,
+  station: String
 })
 
-module.exports = mongoose.model('BusInfo', schema)
+module.exports = mongoose.model('bus_location', schema)
