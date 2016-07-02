@@ -3,7 +3,7 @@
 const user = require('./controller/user')
 const bus = require('./controller/bus')
 const busLocation = require('./controller/busLocation')
-const destination = require('./controller/destination')
+const dest = require('./controller/dest')
 const sign = require('./controller/sign')
 const index = require('./controller/index')
 const auth = require('./middleware/authenticator')
@@ -12,7 +12,7 @@ const router = require('koa-router')()
 router.get('/', index.index)
 router.get('/bus/:id', bus.getInfoById)
 router.get('/busLocation/:id', busLocation.getInfoById)
-router.get('/destination/:id', destination.getDestionation)
+router.get('/dest/:id', dest.getDest)
 
 // sign
 router.get('/login', sign.showLogin)
